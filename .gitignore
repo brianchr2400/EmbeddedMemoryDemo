@@ -1,0 +1,42 @@
+# Binary files
+*.exe
+*.out
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+
+# Build folders
+/build/
+/bin/
+/obj/
+/dist/
+
+# VS Code settings
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# CMake / Make
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Debug files
+*.dSYM/
+*.d/
+*.lst
+
+# Simulink/MATLAB outputs
+*.slxc
+*.slxautobackup
+*.asv
+
+# Python virtualenvs
+.venv/
+__pycache__/
+*.pyc

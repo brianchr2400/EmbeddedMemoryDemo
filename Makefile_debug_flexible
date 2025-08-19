@@ -1,0 +1,28 @@
+# === Flexible Makefile for EmbeddedMemoryDemo with Debug Flags ===
+
+CC = gcc
+CFLAGS = -Iinclude -Wall -g
+SRC_DIR = src
+BUILD_DIR = build
+TARGET = $(BUILD_DIR)/embedded_demo.exe
+
+# Automatically find all .c files in the source directory
+SRCS = $(wildcard $(SRC_DIR)/*.c)
+OBJS = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRCS))
+
+# Default target
+all: $(TARGET)
+
+# Link the final executable
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET)
+
+# Compile each .c file to a corresponding .o file
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean build artifacts
+clean:
+	del /Q $(BUILD_DIR)\*.o $(TARGET)
+
+.PHONY: all clean
