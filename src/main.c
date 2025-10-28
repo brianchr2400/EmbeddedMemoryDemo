@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "../include/memory_map.h"
 
+// Test update after moving project in Methuselah
+
 int main() {
     // Simulate writing to a control register
     control_register.enable = 1;

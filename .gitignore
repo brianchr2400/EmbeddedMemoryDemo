@@ -40,3 +40,39 @@ cmake_install.cmake
 .venv/
 __pycache__/
 *.pyc
+
+# macOS system files (just in case)
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Logs
+*.log
+
+# Compiled Python files (if mixing with Python later)
+__pycache__/
+*.py[cod]
+
+# Build files
+/build/
+*.o
+*.exe
+
+# IDE and editor settings
+.vscode/
+*.swp
+*~
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Merge conflict backup files
+*.orig
